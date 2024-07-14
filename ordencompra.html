@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Dashboard</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Container for the orders and reviews section -->
+    <div class="container mt-4">
+        <h1 class="h3 mb-4 text-gray-800">Órdenes de Compra y Reseñas de Productos</h1>
+
+        <!-- Filter section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Filtros
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="filterDate">Fecha</label>
+                            <input type="date" class="form-control" id="filterDate">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="filterStatus">Estatus</label>
+                            <select class="form-control" id="filterStatus">
+                                <option value="">Selecciona un estatus</option>
+                                <option value="pendiente">Pendiente</option>
+                                <option value="aprobada">Aprobada</option>
+                                <option value="cancelada">Cancelada</option>
+                                <option value="no_autorizada">No Autorizada</option>
+                                <option value="enviada">Enviada</option>
+                                <option value="entregada">Entregada</option>
+                                <option value="devuelta">Devuelta</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="filterButton">&nbsp;</label>
+                            <button class="btn btn-primary form-control" id="filterButton">Filtrar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Orders section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Órdenes de Compra
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Fecha</th>
+                            <th>Estatus</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2024-07-13</td>
+                            <td>Pendiente</td>
+                            <td>
+                                <select class="form-control">
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="aprobada">Aprobada</option>
+                                    <option value="cancelada">Cancelada</option>
+                                    <option value="no_autorizada">No Autorizada</option>
+                                    <option value="enviada">Enviada</option>
+                                    <option value="entregada">Entregada</option>
+                                    <option value="devuelta">Devuelta</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- Additional rows can be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Reviews section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                Reseñas de Productos
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Reseña</th>
+                            <th>Calificación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Producto 1</td>
+                            <td>Muy buen producto.</td>
+                            <td>5 estrellas</td>
+                        </tr>
+                        <!-- Additional rows can be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
