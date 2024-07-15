@@ -23,8 +23,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-</body>
 
 </head>
 
@@ -81,7 +79,7 @@
                         <a class="collapse-item" href="users.html">Usuarios</a>
                         <a class="collapse-item" href="services.html">Servicios</a>
                         <a class="collapse-item" href="customer.html">Clientes</a>
-                        <a class="collapse-item" href="categori.html">Categorías</a>
+                        <a class="collapse-item active" href="categori.html">Categorías</a>
                     </div>
                 </div>
             </li>
@@ -331,33 +329,282 @@
                 
                 
                 
-                -->
-
-                <div class="container mt-4">
-                    <h1>Bitácora de Movimientos</h1>
-                    <input class="form-control mb-3" id="searchInput" type="text" placeholder="Buscar...">
-                    <table class="table table-bordered table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th onclick="sortTable(0)">ID</th>
-                                <th onclick="sortTable(1)">Fecha y Hora</th>
-                                <th onclick="sortTable(2)">Movimiento</th>
-                                <th onclick="sortTable(3)">Usuario</th>
-                            </tr>
-                        </thead>
-                        <tbody id="logTable">
-                            <!-- Las filas se llenarán dinámicamente con JavaScript -->
-                        </tbody>
-                    </table>
-                    <div id="pagination" class="d-flex justify-content-center mt-3">
-                        <!-- Los botones de paginación se generarán dinámicamente -->
-                    </div>
+                --><div class="container mt-5">
+    <h2 class="mb-4">Administración de Categorías</h2>
+    
+    <!-- Buscador -->
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Buscar categoría" id="searchCategory">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" onclick="searchCategory()">Buscar</button>
+        </div>
+    </div>
+    
+    <!-- Formulario para Alta de Categoría -->
+    <div class="card mb-4">
+        <div class="card-header">
+            Alta de Categoría
+        </div>
+        <div class="card-body">
+            <form id="categoryForm">
+                <div class="form-group">
+                    <label for="categoryName">Nombre de la Categoría</label>
+                    <input type="text" class="form-control" id="categoryName" required>
                 </div>
-            
-                <!-- Enlace a jQuery y Bootstrap JS -->
-                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-                <script src="log_scripts.js"></script>
+                <div class="form-group">
+                    <label for="categoryDescription">Descripción</label>
+                    <textarea class="form-control" id="categoryDescription" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Tabla de Categorías -->
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre de la Categoría</th>
+                <th>Descripción</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+        <tbody id="categoryTableBody">
+            <!-- Ejemplo de una categoría (debes reemplazar esto con datos reales) -->
+            <tr>
+                <td>1</td>
+                <td>Hardware</td>
+                <td>Componentes físicos del equipo.</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Paginación -->
+    <nav>
+        <ul class="pagination justify-content-center" id="pagination">
+            <!-- Las páginas se generarán dinámicamente aquí -->
+        </ul>
+    </nav>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JS para funcionalidad (ejemplo básico, debes reemplazar con lógica real) -->
+<script>
+    const categories = [
+        { id: 1, name: 'Hardware', description: 'Componentes físicos del equipo.' },
+        // Añade más categorías aquí para pruebas
+    ];
+    const categoriesPerPage = 5;
+    let currentPage = 1;
+
+    function searchCategory() {
+        let searchValue = document.getElementById('searchCategory').value.toLowerCase();
+        renderTable(categories.filter(category => 
+            category.name.toLowerCase().includes(searchValue) || 
+            category.description.toLowerCase().includes(searchValue)
+        ));
+    }
+
+    function editCategory(button) {
+        let row = button.closest('tr');
+        let cells = row.getElementsByTagName('td');
+        document.getElementById('categoryName').value = cells[1].innerText;
+        document.getElementById('categoryDescription').value = cells[2].innerText;
+        document.getElementById('categoryForm').dataset.rowIndex = row.rowIndex;
+    }
+
+    function deleteCategory(button) {
+        if (confirm('¿Estás seguro de que quieres eliminar esta categoría?')) {
+            let row = button.closest('tr');
+            row.parentNode.removeChild(row);
+        }
+    }
+
+    document.getElementById('categoryForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let rowIndex = this.dataset.rowIndex;
+        let categoryName = document.getElementById('categoryName').value;
+        let categoryDescription = document.getElementById('categoryDescription').value;
+
+        if (rowIndex) {
+            // Editar categoría existente
+            let category = categories[rowIndex - 1];
+            category.name = categoryName;
+            category.description = categoryDescription;
+            delete this.dataset.rowIndex;
+        } else {
+            // Agregar nueva categoría
+            let newCategory = {
+                id: categories.length + 1,
+                name: categoryName,
+                description: categoryDescription
+            };
+            categories.push(newCategory);
+        }
+
+        this.reset();
+        renderTable(categories);
+    });
+
+    function renderTable(categoryList) {
+        let table = document.getElementById('categoryTableBody');
+        table.innerHTML = '';
+
+        let start = (currentPage - 1) * categoriesPerPage;
+        let end = start + categoriesPerPage;
+        let paginatedCategories = categoryList.slice(start, end);
+
+        paginatedCategories.forEach(category => {
+            let row = table.insertRow();
+            row.insertCell(0).innerText = category.id;
+            row.insertCell(1).innerText = category.name;
+            row.insertCell(2).innerText = category.description;
+            row.insertCell(3).innerHTML = '<button class="btn btn-warning btn-sm" onclick="editCategory(this)">Editar</button> <button class="btn btn-danger btn-sm" onclick="deleteCategory(this)">Eliminar</button>';
+        });
+
+        renderPagination(categoryList.length);
+    }
+
+    function renderPagination(totalCategories) {
+        let totalPages = Math.ceil(totalCategories / categoriesPerPage);
+        let pagination = document.getElementById('pagination');
+        pagination.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            let li = document.createElement('li');
+            li.className = 'page-item' + (i === currentPage ? ' active' : '');
+            li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
+            pagination.appendChild(li);
+        }
+    }
+
+    function changePage(page) {
+        currentPage = page;
+        renderTable(categories);
+    }
+
+    // Inicializar la tabla con datos de prueba
+    renderTable(categories);
+</script>
+
+
 
 
 
@@ -368,16 +615,16 @@
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Seguro de cerrar sesión?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                            <div class="modal-body">Selecciona Salir para cerrar sesión.
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="login.html">Logout</a>
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <a class="btn btn-primary" href="login.html">Salir</a>
                             </div>
                         </div>
                     </div>
