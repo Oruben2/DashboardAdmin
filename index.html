@@ -36,20 +36,16 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-               
                 <div class="sidebar-brand-text mx-3">ReparaTech</div>
             </a>
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider">
             <!-- Divider -->
@@ -60,25 +56,37 @@
             </div>
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="abcc.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>ABCC</span></a>
+                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>ABCC</span>
+                </a>
+                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">ABCC:</h6>
+                        <a class="collapse-item" href="users.html">Usuarios</a>
+                        <a class="collapse-item" href="services.html">Servicios</a>
+                        <a class="collapse-item" href="customer.html">Clientes</a>
+                        <a class="collapse-item" href="categori.html">Categorías</a>
+                    </div>
+                </div>
             </li>
 
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="ordencompra.html">
+                <a class="nav-link" href="orderbuys.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Ordenes de compra</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="estadisticas.html">
+                <a class="nav-link" href="statics.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Estadísticas</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="movimientos.html">
+                <a class="nav-link" href="movements.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Movimientos</span></a>
             </li>
@@ -86,29 +94,18 @@
                 <a class="nav-link" href="login.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Login</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="register.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Regístrate</span></a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="forgot-password.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Olvido su contraseña</span></a>
             </li>
-
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
-
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-
             <!-- Sidebar Message -->
-
-
         </ul>
         <!-- End of Sidebar -->
 
@@ -235,7 +232,7 @@
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/user2.png" alt="...">
+                                        <img class="rounded-circle" src="img/User2.jpg" alt="...">
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
@@ -264,14 +261,7 @@
                                         <div class="small text-gray-500">Morgan Álvarez · 2d</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
 
-                                </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div>
                         </li>
@@ -649,7 +639,7 @@
                                         <i class="fas fa-circle text-success"></i> Servicio por hora
                                     </span>
                                     <span class="mr-2">
-                                        <i class="fas fa-circle text-info"></i> Mtto basico
+                                        <i class="fas fa-circle text-info"></i> Mtto básico
                                     </span>
                                 </div>
                             </div>
@@ -666,7 +656,7 @@
 
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Proyectos de ReparacTech</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Proyectos de ReparaTech</h6>
                             </div>
                             <div class="card-body">
                                 <!-- Paquete de Mantenimiento de Equipos de Computadoras -->
@@ -694,63 +684,63 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.container-fluid -->
-            </div>
-            <!-- End of Main Content -->
-        </div>
-        <!-- End of Content Wrapper -->
-        <!-- End of Page Wrapper -->
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
-
-        <!-- Logout Modal-->
-        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres salir? </h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Cerrar sesión" Selecciona salir si estas seguro de cerrar sesión.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                        <a class="btn btn-primary" href="login.html">Salir</a>
                     </div>
                 </div>
             </div>
+            <!-- /.container-fluid -->
         </div>
+        <!-- End of Main Content -->
+    </div>
+    <!-- End of Content Wrapper -->
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Seguro que quieres salir? </h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Cerrar sesión" Selecciona salir si estas seguro de cerrar sesión.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                    <a class="btn btn-primary" href="login.html">Salir</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <!-- Core plugin JavaScript-->
-        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="js/sb-admin-2.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="js/demo/chart-area-demo.js"></script>
-        <script src="js/demo/chart-pie-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
 
 </body>
 <!-- Footer -->
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2021</span>
+            <span>Copyright &copy; no usar plis</span>
         </div>
     </div>
 </footer>
