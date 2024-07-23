@@ -397,8 +397,11 @@
                     </div>
 
                     <!-- Reviews Section -->
-<div class="col-lg-6 mb-4">
-    <div class="card shadow mb-4">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<div class="container-fluid mb-4">
+    <div class="card shadow mb-4 w-100">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Comentarios</h6>
         </div>
@@ -406,23 +409,42 @@
             <div class="list-group">
                 <div class="list-group-item" id="comment1">
                     <p>¡Excelente servicio! Muy recomendado.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment1')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment1')">Censurar</button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-danger btn-sm mr-2" onclick="deleteComment('comment1')">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </button>
+                        <button class="btn btn-warning btn-sm" onclick="censorComment('comment1')">
+                            <i class="fas fa-ban"></i> Censurar
+                        </button>
+                    </div>
                 </div>
                 <div class="list-group-item" id="comment2">
                     <p>No estoy satisfecho con el producto.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment2')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment2')">Censurar</button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-danger btn-sm mr-2" onclick="deleteComment('comment2')">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </button>
+                        <button class="btn btn-warning btn-sm" onclick="censorComment('comment2')">
+                            <i class="fas fa-ban"></i> Censurar
+                        </button>
+                    </div>
                 </div>
                 <div class="list-group-item" id="comment3">
                     <p>Me encantó la calidad y el trato del personal.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment3')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment3')">Censurar</button>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-danger btn-sm mr-2" onclick="deleteComment('comment3')">
+                            <i class="fas fa-trash-alt"></i> Eliminar
+                        </button>
+                        <button class="btn btn-warning btn-sm" onclick="censorComment('comment3')">
+                            <i class="fas fa-ban"></i> Censurar
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <!-- End of Reviews Section -->
 
 <script>
