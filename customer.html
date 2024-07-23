@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,7 +36,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                
+
                 <div class="sidebar-brand-text mx-3">ReparaTech</div>
             </a>
 
@@ -79,7 +78,7 @@
                         <h6 class="collapse-header">ABCC:</h6>
                         <a class="collapse-item" href="users.html">Usuarios</a>
                         <a class="collapse-item" href="services.html">Servicios</a>
-                        <a class="collapse-item" href="customer.html">Clientes</a>
+                        <a class="collapse-item active" href="customer.html">Clientes</a>
                         <a class="collapse-item" href="categori.html">Categorías</a>
                     </div>
                 </div>
@@ -104,7 +103,7 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>Login</span></a>
             </li>
-         
+       
             <li class="nav-item">
                 <a class="nav-link" href="forgot-password.html">
                     <i class="fas fa-fw fa-table"></i>
@@ -277,7 +276,7 @@
                                         <div class="small text-gray-500">Morgan Álvarez · 2d</div>
                                     </div>
                                 </a>
-
+                                
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
                             </div>
                         </li>
@@ -321,142 +320,322 @@
 
                 <!--AQui puedes escribir 
                 
-    <!-- Container for the orders and reviews section -->
-                <div class="container mt-4">
-                    <h1 class="h3 mb-4 text-gray-800">Órdenes de Compra y Reseñas de Productos</h1>
+                
+                
+                
+                
+                
+                -->
 
-                    <!-- Filter section -->
+                <div class="container mt-5">
+                    <h2 class="mb-4">Administración de Clientes</h2>
+                    
+                    <!-- Buscador -->
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Buscar cliente" id="searchClient">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" onclick="searchClient()">Buscar</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario para Alta de Cliente -->
                     <div class="card mb-4">
                         <div class="card-header">
-                            Filtros
+                            Alta de Cliente
                         </div>
                         <div class="card-body">
-                            <form>
-                                <div class="form-row">
-                                    <div class="col-md-4 mb-3">
-                                        <label for="filterDate">Fecha</label>
-                                        <input type="date" class="form-control" id="filterDate">
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="filterStatus">Estatus</label>
-                                        <select class="form-control" id="filterStatus">
-                                            <option value="">Selecciona un estatus</option>
-                                            <option value="pendiente">Pendiente</option>
-                                            <option value="aprobada">Aprobada</option>
-                                            <option value="cancelada">Cancelada</option>
-                                            <option value="no_autorizada">No Autorizada</option>
-                                            <option value="enviada">Enviada</option>
-                                            <option value="entregada">Entregada</option>
-                                            <option value="devuelta">Devuelta</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mb-3">
-                                        <label for="filterButton">&nbsp;</label>
-                                        <button class="btn btn-primary form-control" id="filterButton">Filtrar</button>
-                                    </div>
+                            <form id="clientForm">
+                                <div class="form-group">
+                                    <label for="clientName">Nombre</label>
+                                    <input type="text" class="form-control" id="clientName" required>
                                 </div>
+                                <div class="form-group">
+                                    <label for="clientEmail">Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="clientEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientPhone">Número de Teléfono</label>
+                                    <input type="tel" class="form-control" id="clientPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientAddress">Dirección</label>
+                                    <input type="text" class="form-control" id="clientAddress" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientDetails">Detalles Adicionales</label>
+                                    <textarea class="form-control" id="clientDetails" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </form>
                         </div>
                     </div>
-
-                    <!-- Orders section -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            Órdenes de Compra
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Fecha</th>
-                                        <th>Estatus</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>2024-07-13</td>
-                                        <td>Pendiente</td>
-                                        <td>
-                                            <select class="form-control">
-                                                <option value="pendiente">Pendiente</option>
-                                                <option value="aprobada">Aprobada</option>
-                                                <option value="cancelada">Cancelada</option>
-                                                <option value="no_autorizada">No Autorizada</option>
-                                                <option value="enviada">Enviada</option>
-                                                <option value="entregada">Entregada</option>
-                                                <option value="devuelta">Devuelta</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <!-- Additional rows can be added here -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- Reviews Section -->
-<div class="col-lg-6 mb-4">
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Comentarios</h6>
-        </div>
-        <div class="card-body">
-            <div class="list-group">
-                <div class="list-group-item" id="comment1">
-                    <p>¡Excelente servicio! Muy recomendado.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment1')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment1')">Censurar</button>
+                    
+                    <!-- Tabla de Clientes -->
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Correo Electrónico</th>
+                                <th>Número de Teléfono</th>
+                                <th>Dirección</th>
+                                <th>Detalles Adicionales</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tbody id="clientTableBody">
+                            <!-- Ejemplo de un cliente (debes reemplazar esto con datos reales) -->
+                            <tr>
+                                <td>1</td>
+                                <td>Lorenzo Tapioca</td>
+                                <td>Lorenzo@outlook.com</td>
+                                <td>449 128 9726</td>
+                                <td>la punta del cerro del muerto</td>
+                                <td>Casi no usa Servicios</td>
+                                <td>
+                                    <button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button>
+                                    <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <!-- Paginación -->
+                    <nav>
+                        <ul class="pagination justify-content-center" id="pagination">
+                            <!-- Las páginas se generarán dinámicamente aquí -->
+                        </ul>
+                    </nav>
                 </div>
-                <div class="list-group-item" id="comment2">
-                    <p>No estoy satisfecho con el producto.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment2')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment2')">Censurar</button>
-                </div>
-                <div class="list-group-item" id="comment3">
-                    <p>Me encantó la calidad y el trato del personal.</p>
-                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment3')">Eliminar</button>
-                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment3')">Censurar</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End of Reviews Section -->
+                
+                <!-- Bootstrap JS and dependencies -->
+                <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                
+                <!-- JS para funcionalidad (ejemplo básico, debes reemplazar con lógica real) -->
+                <script>
+                    const clients = [
+                        { id: 1, name: 'Lorenzo Tapioca', email: 'Lorenzo@outlook.com', phone: '449 128 9726', address: 'la punta del cerro del muerto', details: 'Casi no usa Servicios' },
+                        // Añade más clientes aquí para pruebas
+                    ];
+                    const clientsPerPage = 5;
+                    let currentPage = 1;
+                
+                    function searchClient() {
+                        let searchValue = document.getElementById('searchClient').value.toLowerCase();
+                        renderTable(clients.filter(client => 
+                            client.name.toLowerCase().includes(searchValue) || 
+                            client.email.toLowerCase().includes(searchValue) ||
+                            client.phone.toLowerCase().includes(searchValue) ||
+                            client.address.toLowerCase().includes(searchValue) ||
+                            client.details.toLowerCase().includes(searchValue)
+                        ));
+                    }
+                
+                    function editClient(button) {
+                        let row = button.closest('tr');
+                        let cells = row.getElementsByTagName('td');
+                        document.getElementById('clientName').value = cells[1].innerText;
+                        document.getElementById('clientEmail').value = cells[2].innerText;
+                        document.getElementById('clientPhone').value = cells[3].innerText;
+                        document.getElementById('clientAddress').value = cells[4].innerText;
+                        document.getElementById('clientDetails').value = cells[5].innerText;
+                        document.getElementById('clientForm').dataset.rowIndex = row.rowIndex;
+                    }
+                
+                    function deleteClient(button) {
+                        if (confirm('¿Estás seguro de que quieres eliminar este cliente?')) {
+                            let row = button.closest('tr');
+                            row.parentNode.removeChild(row);
+                        }
+                    }
+                
+                    document.getElementById('clientForm').addEventListener('submit', function(event) {
+                        event.preventDefault();
+                        let rowIndex = this.dataset.rowIndex;
+                        let clientName = document.getElementById('clientName').value;
+                        let clientEmail = document.getElementById('clientEmail').value;
+                        let clientPhone = document.getElementById('clientPhone').value;
+                        let clientAddress = document.getElementById('clientAddress').value;
+                        let clientDetails = document.getElementById('clientDetails').value;
+                
+                        if (rowIndex) {
+                            // Editar cliente existente
+                            let client = clients[rowIndex - 1];
+                            client.name = clientName;
+                            client.email = clientEmail;
+                            client.phone = clientPhone;
+                            client.address = clientAddress;
+                            client.details = clientDetails;
+                            delete this.dataset.rowIndex;
+                        } else {
+                            // Agregar nuevo cliente
+                            let newClient = {
+                                id: clients.length + 1,
+                                name: clientName,
+                                email: clientEmail,
+                                phone: clientPhone,
+                                address: clientAddress,
+                                details: clientDetails
+                            };
+                            clients.push(newClient);
+                        }
+                
+                        this.reset();
+                        renderTable(clients);
+                    });
+                
+                    function renderTable(clientList) {
+                        let table = document.getElementById('clientTableBody');
+                        table.innerHTML = '';
+                
+                        let start = (currentPage - 1) * clientsPerPage;
+                        let end = start + clientsPerPage;
+                        let paginatedClients = clientList.slice(start, end);
+                
+                        paginatedClients.forEach(client => {
+                            let row = table.insertRow();
+                            row.insertCell(0).innerText = client.id;
+                            row.insertCell(1).innerText = client.name;
+                            row.insertCell(2).innerText = client.email;
+                            row.insertCell(3).innerText = client.phone;
+                            row.insertCell(4).innerText = client.address;
+                            row.insertCell(5).innerText = client.details;
+                            row.insertCell(6).innerHTML = '<button class="btn btn-warning btn-sm" onclick="editClient(this)">Editar</button> <button class="btn btn-danger btn-sm" onclick="deleteClient(this)">Eliminar</button>';
+                        });
+                
+                        renderPagination(clientList.length);
+                    }
+                
+                    function renderPagination(totalClients) {
+                        let totalPages = Math.ceil(totalClients / clientsPerPage);
+                        let pagination = document.getElementById('pagination');
+                        pagination.innerHTML = '';
+                
+                        for (let i = 1; i <= totalPages; i++) {
+                            let li = document.createElement('li');
+                            li.className = 'page-item' + (i === currentPage ? ' active' : '');
+                            li.innerHTML = `<a class="page-link" href="#" onclick="changePage(${i})">${i}</a>`;
+                            pagination.appendChild(li);
+                        }
+                    }
+                
+                    function changePage(page) {
+                        currentPage = page;
+                        renderTable(clients);
+                    }
+                
+                    // Inicializar la tabla con datos de prueba
+                    renderTable(clients);
+                </script>
+                
 
-<script>
-function deleteComment(commentId) {
-    var comment = document.getElementById(commentId);
-    comment.parentNode.removeChild(comment);
-}
-
-function censorComment(commentId) {
-    var comment = document.getElementById(commentId);
-    var p = comment.getElementsByTagName('p')[0];
-    p.textContent = 'Este comentario ha sido censurado.';
-}
-</script>
-
-
-                </div>
-
-                <!-- Bootstrap core JavaScript-->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-                <!-- Core plugin JavaScript-->
-                <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-                <!-- Custom scripts for all pages-->
-                <script src="js/sb-admin-2.min.js"></script>
-
-
-
-
-
-                -->
 
 
 
@@ -467,16 +646,16 @@ function censorComment(commentId) {
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <h5 class="modal-title" id="exampleModalLabel">Seguro de cerrar sesión?</h5>
                                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">×</span>
                                 </button>
                             </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.
+                            <div class="modal-body">Selecciona Salir para cerrar sesión.
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-primary" href="login.html">Logout</a>
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                                <a class="btn btn-primary" href="login.html">Salir</a>
                             </div>
                         </div>
                     </div>
