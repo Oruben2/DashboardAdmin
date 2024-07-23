@@ -313,17 +313,17 @@
     </div>
     <!-- End of Page Wrapper -->
 
-    <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+    
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
+    
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
+    
     <script>
+        // Gráfico de barras: Productos más visitados
         const mostVisitedProducts = new Chart(document.getElementById('mostVisitedProducts'), {
             type: 'bar',
             data: {
@@ -338,13 +338,19 @@
             },
             options: {
                 scales: {
+                    x: {
+                        ticks: {
+                            display: false // Oculta las etiquetas del eje x
+                        }
+                    },
                     y: {
                         beginAtZero: true
                     }
                 }
             }
         });
-
+    
+        // Gráfico de barras: Productos menos visitados
         const leastVisitedProducts = new Chart(document.getElementById('leastVisitedProducts'), {
             type: 'bar',
             data: {
@@ -359,13 +365,19 @@
             },
             options: {
                 scales: {
+                    x: {
+                        ticks: {
+                            display: false // Oculta las etiquetas del eje x
+                        }
+                    },
                     y: {
                         beginAtZero: true
                     }
                 }
             }
         });
-
+    
+        // Gráfico de barras: Productos más vendidos
         const mostSoldProducts = new Chart(document.getElementById('mostSoldProducts'), {
             type: 'bar',
             data: {
@@ -380,13 +392,19 @@
             },
             options: {
                 scales: {
+                    x: {
+                        ticks: {
+                            display: false // Oculta las etiquetas del eje x
+                        }
+                    },
                     y: {
                         beginAtZero: true
                     }
                 }
             }
         });
-
+    
+        // Gráfico de barras: Productos menos vendidos
         const leastSoldProducts = new Chart(document.getElementById('leastSoldProducts'), {
             type: 'bar',
             data: {
@@ -401,15 +419,21 @@
             },
             options: {
                 scales: {
+                    x: {
+                        ticks: {
+                            display: false // Oculta las etiquetas del eje x
+                        }
+                    },
                     y: {
                         beginAtZero: true
                     }
                 }
             }
         });
-
+    
+        // Gráfico lineal: Mayor cantidad de búsquedas por categoría
         const mostSearchedCategories = new Chart(document.getElementById('mostSearchedCategories'), {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: ['Paquetes de mantenimiento', 'Paquetes de redes', 'Servicios individuales'],
                 datasets: [{
@@ -428,9 +452,10 @@
                 }
             }
         });
-
+    
+        // Gráfico lineal: Menor cantidad de búsquedas por categoría
         const leastSearchedCategories = new Chart(document.getElementById('leastSearchedCategories'), {
-            type: 'bar',
+            type: 'line',
             data: {
                 labels: ['Paquetes de mantenimiento', 'Paquetes de redes', 'Servicios individuales'],
                 datasets: [{
@@ -449,110 +474,64 @@
                 }
             }
         });
-
+    
+        // Gráfico de pastel: Usuarios con mayor cantidad de compras
         const topUsers = new Chart(document.getElementById('topUsers'), {
-            type: 'bar',
+            type: 'pie',
             data: {
                 labels: ['Juan', 'Maria', 'Luis', 'Carlos', 'Ana'],
                 datasets: [{
                     label: 'Usuarios con mayor cantidad de compras',
                     data: [10, 9, 8, 7, 6],
-                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                    borderColor: 'rgba(54, 162, 235, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const bottomUsers = new Chart(document.getElementById('bottomUsers'), {
-            type: 'bar',
-            data: {
-                labels: ['Pedro', 'Jorge', 'Luisa', 'Marta', 'Felipe'],
-                datasets: [{
-                    label: 'Usuarios con menor cantidad de compras',
-                    data: [1, 2, 3, 4, 5],
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-        const ctxDia = document.getElementById('visitantesDiaChart').getContext('2d');
-        const visitantesDiaChart = new Chart(ctxDia, {
-            type: 'bar',
-            data: {
-                labels: ['00:00-04:00', '04:00-08:00', '08:00-12:00', '12:00-16:00', '16:00-20:00', '20:00-00:00'],
-                datasets: [{
-                    label: 'Visitantes por día',
-                    data: [50, 150, 300, 250, 200, 100],
                     backgroundColor: [
-                        'rgba(75, 192, 192, 0.2)',
                         'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
                         'rgba(255, 99, 132, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
                         'rgba(153, 102, 255, 0.2)',
                         'rgba(255, 159, 64, 0.2)'
                     ],
                     borderColor: [
-                        'rgba(75, 192, 192, 1)',
                         'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
                         'rgba(255, 99, 132, 1)',
+                        'rgba(75, 192, 192, 1)',
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
                     borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
             }
         });
-
-        
-        const visitors = new Chart(document.getElementById('visitors'), {
-            type: 'line',
+    
+        // Gráfico de pastel: Usuarios con menor cantidad de compras
+        const bottomUsers = new Chart(document.getElementById('bottomUsers'), {
+            type: 'pie',
             data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                labels: ['Pedro', 'Jorge', 'Luisa', 'Marta', 'Felipe'],
                 datasets: [{
-                    label: 'Visitantes por mes',
-                    data: [100, 200, 300, 400, 500, 600, 700],
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    label: 'Usuarios con menor cantidad de compras',
+                    data: [1, 2, 3, 4, 5],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
                     borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
             }
         });
-
-        const ctxAno = document.getElementById('visitantesAnoChart').getContext('2d');
-        const visitantesAnoChart = new Chart(ctxAno, {
-            type: 'bar',
+    
+        // Gráfico de pastel: Visitantes por año
+        const visitorsYear = new Chart(document.getElementById('visitorsYear'), {
+            type: 'pie',
             data: {
                 labels: ['2020', '2021', '2022', '2023', '2024'],
                 datasets: [{
@@ -574,16 +553,10 @@
                     ],
                     borderWidth: 1
                 }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
             }
         });
     </script>
+    
 </body>
 
 </html>
