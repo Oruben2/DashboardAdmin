@@ -396,31 +396,48 @@
                         </div>
                     </div>
 
-                    <!-- Reviews section -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            Reseñas de Productos
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Producto</th>
-                                        <th>Reseña</th>
-                                        <th>Calificación</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Producto 1</td>
-                                        <td>Muy buen producto.</td>
-                                        <td>5 estrellas</td>
-                                    </tr>
-                                    <!-- Additional rows can be added here -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <!-- Reviews Section -->
+<div class="col-lg-6 mb-4">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Comentarios</h6>
+        </div>
+        <div class="card-body">
+            <div class="list-group">
+                <div class="list-group-item" id="comment1">
+                    <p>¡Excelente servicio! Muy recomendado.</p>
+                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment1')">Eliminar</button>
+                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment1')">Censurar</button>
+                </div>
+                <div class="list-group-item" id="comment2">
+                    <p>No estoy satisfecho con el producto.</p>
+                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment2')">Eliminar</button>
+                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment2')">Censurar</button>
+                </div>
+                <div class="list-group-item" id="comment3">
+                    <p>Me encantó la calidad y el trato del personal.</p>
+                    <button class="btn btn-danger btn-sm" onclick="deleteComment('comment3')">Eliminar</button>
+                    <button class="btn btn-warning btn-sm" onclick="censorComment('comment3')">Censurar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Reviews Section -->
+
+<script>
+function deleteComment(commentId) {
+    var comment = document.getElementById(commentId);
+    comment.parentNode.removeChild(comment);
+}
+
+function censorComment(commentId) {
+    var comment = document.getElementById(commentId);
+    var p = comment.getElementsByTagName('p')[0];
+    p.textContent = 'Este comentario ha sido censurado.';
+}
+</script>
+
 
                 </div>
 
